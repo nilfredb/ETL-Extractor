@@ -1,5 +1,5 @@
 
-# ETL Opiniones (DWOpiniones)
+# ETL Opiniones
 
 Pipeline ETL en Python que cumple la rúbrica de la práctica de arquitectura y extracción (adaptado de .NET a Python).
 
