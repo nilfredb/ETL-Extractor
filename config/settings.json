@@ -1,0 +1,14 @@
+{
+  "paths": {
+    "clients_csv": "../etl_opiniones/data/clients.csv",
+    "products_csv": "../etl_opiniones/data/products.csv",
+    "fuente_csv": "../etl_opiniones/data/fuente_datos.csv",
+    "social_comments_csv": "../etl_opiniones/data/social_comments.csv",
+    "surveys_csv": "../etl_opiniones/data/surveys_part1.csv",
+    "web_reviews_csv": "../etl_opiniones/data/web_reviews.csv",
+    "sql_opiniones": "sql:SELECT IdOpinion, IdCliente, IdProducto, Comentario, PuntajeSatisfaccion, Fecha, Fuente FROM Opiniones",
+    "api_opiniones": "https://api.miempresa.com/opiniones"
+  },
+  "staging_db": "../etl_opiniones/output/staging_dwopiniones.sqlite",
+  "log_path": "../etl_opiniones/logs/etl.log"
+}

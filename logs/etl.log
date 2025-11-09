@@ -1,0 +1,266 @@
+2025-11-09 18:08:17,972 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 18:08:17,973 - INFO - etl - Leyendo clients_csv desde /mnt/data/clients.csv
+2025-11-09 18:08:17,978 - INFO - etl - Leyendo products_csv desde /mnt/data/products.csv
+2025-11-09 18:08:17,981 - INFO - etl - Leyendo fuente_csv desde /mnt/data/fuente_datos.csv
+2025-11-09 18:08:17,983 - INFO - etl - Leyendo social_comments_csv desde /mnt/data/social_comments.csv
+2025-11-09 18:08:17,986 - INFO - etl - Leyendo surveys_csv desde /mnt/data/surveys_part1.csv
+2025-11-09 18:08:17,991 - INFO - etl - Leyendo web_reviews_csv desde /mnt/data/web_reviews.csv
+2025-11-09 18:08:17,996 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 18:08:17,999 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 18:08:18,001 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 18:08:18,004 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 18:08:18,008 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 18:08:18,066 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 18:09:10,424 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 18:09:10,424 - INFO - etl - Leyendo clients_csv desde /mnt/data/clients.csv
+2025-11-09 18:09:10,428 - INFO - etl - Leyendo products_csv desde /mnt/data/products.csv
+2025-11-09 18:09:10,431 - INFO - etl - Leyendo fuente_csv desde /mnt/data/fuente_datos.csv
+2025-11-09 18:09:10,433 - INFO - etl - Leyendo social_comments_csv desde /mnt/data/social_comments.csv
+2025-11-09 18:09:10,436 - INFO - etl - Leyendo surveys_csv desde /mnt/data/surveys_part1.csv
+2025-11-09 18:09:10,441 - INFO - etl - Leyendo web_reviews_csv desde /mnt/data/web_reviews.csv
+2025-11-09 18:09:10,470 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 18:09:10,473 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 18:09:10,475 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 18:09:10,479 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 18:09:10,500 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 18:09:10,504 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 18:09:10,515 - INFO - etl - Dim Cliente: 500
+2025-11-09 18:09:10,521 - INFO - etl - Dim Producto: 200
+2025-11-09 18:09:20,562 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 18:09:20,563 - INFO - etl - Leyendo clients_csv desde /mnt/data/clients.csv
+2025-11-09 18:09:20,567 - INFO - etl - Leyendo products_csv desde /mnt/data/products.csv
+2025-11-09 18:09:20,570 - INFO - etl - Leyendo fuente_csv desde /mnt/data/fuente_datos.csv
+2025-11-09 18:09:20,572 - INFO - etl - Leyendo social_comments_csv desde /mnt/data/social_comments.csv
+2025-11-09 18:09:20,575 - INFO - etl - Leyendo surveys_csv desde /mnt/data/surveys_part1.csv
+2025-11-09 18:09:20,579 - INFO - etl - Leyendo web_reviews_csv desde /mnt/data/web_reviews.csv
+2025-11-09 18:09:20,584 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 18:09:20,588 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 18:09:20,591 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 18:09:20,594 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 18:09:20,609 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 18:09:20,613 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 18:09:20,622 - INFO - etl - Dim Cliente: 500
+2025-11-09 18:09:20,630 - INFO - etl - Dim Producto: 200
+2025-11-09 18:09:20,672 - INFO - etl - Dim Fuente: 100
+2025-11-09 18:09:20,689 - INFO - etl - Dim Fecha: 200
+2025-11-09 18:09:20,708 - INFO - etl - ETL finalizado OK
+2025-11-09 18:09:40,171 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 18:09:40,172 - INFO - etl - Leyendo clients_csv desde /mnt/data/clients.csv
+2025-11-09 18:09:40,177 - INFO - etl - Leyendo products_csv desde /mnt/data/products.csv
+2025-11-09 18:09:40,179 - INFO - etl - Leyendo fuente_csv desde /mnt/data/fuente_datos.csv
+2025-11-09 18:09:40,181 - INFO - etl - Leyendo social_comments_csv desde /mnt/data/social_comments.csv
+2025-11-09 18:09:40,184 - INFO - etl - Leyendo surveys_csv desde /mnt/data/surveys_part1.csv
+2025-11-09 18:09:40,189 - INFO - etl - Leyendo web_reviews_csv desde /mnt/data/web_reviews.csv
+2025-11-09 18:09:40,195 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 18:09:40,209 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 18:09:40,213 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 18:09:40,216 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 18:09:40,221 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 18:09:40,225 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 18:09:40,279 - INFO - etl - Dim Cliente: 500
+2025-11-09 18:09:40,286 - INFO - etl - Dim Producto: 200
+2025-11-09 18:09:40,292 - INFO - etl - Dim Fuente: 100
+2025-11-09 18:09:40,310 - INFO - etl - Dim Fecha: 200
+2025-11-09 18:09:40,394 - INFO - etl - ETL finalizado OK
+2025-11-09 18:10:14,469 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 18:10:14,470 - INFO - etl - Leyendo clients_csv desde /mnt/data/clients.csv
+2025-11-09 18:10:14,474 - INFO - etl - Leyendo products_csv desde /mnt/data/products.csv
+2025-11-09 18:10:14,476 - INFO - etl - Leyendo fuente_csv desde /mnt/data/fuente_datos.csv
+2025-11-09 18:10:14,479 - INFO - etl - Leyendo social_comments_csv desde /mnt/data/social_comments.csv
+2025-11-09 18:10:14,481 - INFO - etl - Leyendo surveys_csv desde /mnt/data/surveys_part1.csv
+2025-11-09 18:10:14,486 - INFO - etl - Leyendo web_reviews_csv desde /mnt/data/web_reviews.csv
+2025-11-09 18:10:14,491 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 18:10:14,494 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 18:10:14,496 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 18:10:14,500 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 18:10:14,505 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 18:10:14,508 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 18:10:14,519 - INFO - etl - Dim Cliente: 500
+2025-11-09 18:10:14,526 - INFO - etl - Dim Producto: 200
+2025-11-09 18:10:14,570 - INFO - etl - Dim Fuente: 100
+2025-11-09 18:10:14,588 - INFO - etl - Dim Fecha: 200
+2025-11-09 18:10:14,625 - INFO - etl - ETL finalizado OK
+2025-11-09 14:28:48,187 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:28:48,187 - INFO - etl - Leyendo clients_csv desde /data/clients.csv
+2025-11-09 14:29:19,379 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:29:19,379 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:29:19,421 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:29:19,442 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:29:19,462 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:29:19,482 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:29:19,509 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:29:19,593 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:29:19,635 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:29:19,675 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:29:19,718 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:29:19,760 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:29:19,806 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:29:19,867 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:29:19,918 - INFO - etl - Dim Producto: 200
+2025-11-09 14:29:19,965 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:29:20,032 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:29:20,290 - INFO - etl - ETL finalizado OK
+2025-11-09 14:41:04,096 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:41:04,096 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:41:04,102 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:41:04,105 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:41:04,107 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:41:04,110 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:41:04,116 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:41:04,179 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:41:04,233 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:41:04,285 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:41:04,337 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:41:04,406 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:41:04,460 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:41:04,528 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:41:04,585 - INFO - etl - Dim Producto: 200
+2025-11-09 14:41:04,639 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:41:04,717 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:41:04,915 - INFO - etl - ETL finalizado OK
+2025-11-09 14:46:58,368 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:46:58,368 - INFO - etl - Consultando API REST...
+2025-11-09 14:47:10,604 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:47:10,605 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:47:10,610 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:47:10,613 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:47:10,615 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:47:10,621 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:47:10,626 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:47:10,693 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:47:10,753 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:47:10,808 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:47:10,862 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:47:10,917 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:47:10,961 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:47:11,028 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:47:11,096 - INFO - etl - Dim Producto: 200
+2025-11-09 14:47:11,161 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:47:11,238 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:47:11,413 - INFO - etl - ETL finalizado OK
+2025-11-09 14:47:49,772 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:47:49,773 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:48:07,042 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:48:07,043 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:48:18,732 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:48:18,733 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:48:24,009 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:48:24,010 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:48:24,015 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:48:24,017 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:48:24,021 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:48:24,025 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:48:24,029 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:48:24,087 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:48:24,132 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:48:24,184 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:48:24,236 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:48:24,282 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:48:24,342 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:48:24,419 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:48:24,486 - INFO - etl - Dim Producto: 200
+2025-11-09 14:48:24,546 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:48:24,625 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:48:24,816 - INFO - etl - ETL finalizado OK
+2025-11-09 14:48:37,870 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:48:37,871 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:48:37,876 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:48:37,879 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:48:37,882 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:48:37,886 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:48:37,892 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:48:37,946 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:48:37,989 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:48:38,036 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:48:38,079 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:48:38,127 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:48:38,179 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:48:38,233 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:48:38,285 - INFO - etl - Dim Producto: 200
+2025-11-09 14:48:38,333 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:48:38,404 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:48:38,647 - INFO - etl - ETL finalizado OK
+2025-11-09 14:49:57,833 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:49:57,834 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:49:57,927 - WARNING - etl - No se pudo consultar la BD: (pyodbc.InterfaceError) ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-09 14:49:57,928 - INFO - etl - Consultando API de opiniones...
+2025-11-09 14:49:57,928 - WARNING - etl - No se pudo consultar la API: 'coroutine' object has no attribute 'copy'
+2025-11-09 14:49:57,929 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:49:57,934 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:49:57,937 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:49:57,942 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:49:57,946 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:49:57,951 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:51:53,813 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:51:53,814 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:51:53,924 - WARNING - etl - No se pudo consultar la BD: (pyodbc.InterfaceError) ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-09 14:51:53,925 - INFO - etl - Consultando API de opiniones...
+2025-11-09 14:51:58,486 - WARNING - etl - No se pudo consultar la API: Expecting value: line 1 column 1 (char 0)
+2025-11-09 14:51:58,487 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:51:58,492 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:51:58,495 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:51:58,499 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:51:58,506 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:51:58,511 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:51:58,583 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:51:58,630 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:51:58,690 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:51:58,761 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:51:58,834 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:51:58,887 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:51:58,962 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:51:59,034 - INFO - etl - Dim Producto: 200
+2025-11-09 14:51:59,094 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:51:59,189 - INFO - etl - Dim Fecha: 319
+2025-11-09 14:56:27,733 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:56:27,734 - INFO - etl - Consultando base de datos relacional...
+2025-11-09 14:56:27,825 - WARNING - etl - No se pudo consultar la BD: (pyodbc.InterfaceError) ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'DESKTOP-VVCI2TV\\Nil\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "SistemaOpiniones" requested by the login. The login failed. (4060)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-09 14:56:27,826 - INFO - etl - Consultando API de opiniones...
+2025-11-09 14:56:48,862 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-11-09 14:56:48,862 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:56:48,866 - INFO - etl - CSV clients_csv: 500 filas
+2025-11-09 14:56:48,866 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:56:48,869 - INFO - etl - CSV products_csv: 200 filas
+2025-11-09 14:56:48,869 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:56:48,871 - INFO - etl - CSV fuente_csv: 100 filas
+2025-11-09 14:56:48,872 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:56:48,875 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-11-09 14:56:48,875 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:56:48,881 - INFO - etl - CSV surveys_csv: 500 filas
+2025-11-09 14:56:48,882 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:56:48,885 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-11-09 14:56:48,947 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:56:48,995 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:56:49,041 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:56:49,083 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:56:49,136 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:56:49,177 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:56:49,236 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:56:49,298 - INFO - etl - Dim Producto: 200
+2025-11-09 14:56:49,351 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:56:49,429 - INFO - etl - Dim Fecha: 319
+2025-11-09 14:56:49,474 - WARNING - etl - FACT: no se pudo procesar stg_db_opiniones: Execution failed on sql 'SELECT * FROM stg_db_opiniones': no such table: stg_db_opiniones
+2025-11-09 14:56:49,475 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-11-09 14:56:49,538 - INFO - etl - FACT: fact_opiniones = 900 filas
+2025-11-09 14:56:49,630 - INFO - etl - ETL finalizado OK
+2025-11-09 14:57:08,973 - INFO - etl - === ETL Opiniones (Python) ===
+2025-11-09 14:57:08,973 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-11-09 14:57:08,978 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-11-09 14:57:08,982 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-11-09 14:57:08,985 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-11-09 14:57:08,987 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-11-09 14:57:08,992 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-11-09 14:57:09,060 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-11-09 14:57:09,117 - INFO - etl - Staging -> stg_products: 200 filas
+2025-11-09 14:57:09,176 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-11-09 14:57:09,231 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-11-09 14:57:09,284 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-11-09 14:57:09,349 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-11-09 14:57:09,425 - INFO - etl - Dim Cliente: 500
+2025-11-09 14:57:09,484 - INFO - etl - Dim Producto: 200
+2025-11-09 14:57:09,545 - INFO - etl - Dim Fuente: 100
+2025-11-09 14:57:09,626 - INFO - etl - Dim Fecha: 200
+2025-11-09 14:57:09,822 - INFO - etl - ETL finalizado OK
