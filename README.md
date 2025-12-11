@@ -16,7 +16,7 @@ El proceso incluye:
 
 ## Arquitectura General del Proyecto
 
-**(Inserta aquí una imagen del flujo ETL)**  
+**(./resources/3.png)**  
 `![Flujo ETL Aquí](link)`  
 
 El sistema consta de tres capas:
@@ -38,9 +38,7 @@ El sistema consta de tres capas:
 ---
 
 ## Modelo Dimensional (Esquema en Estrella)
-
-
-`![Star Schema](link)`  
+`![Star Schema](./resources/Diagram.png)`  
 
 ### Dimensiones
 
@@ -77,7 +75,7 @@ Fuentes soportadas:
 | API | Endpoint REST simulado | JSON con opiniones externas |
 
 **(Inserta imagen de los archivos CSV muestrales)**  
-`![CSV ejemplos](link)`  
+`![CSV ejemplos](./resources/Imagen2.png)`  
 
 Los datos pasan por una fase de normalización:
 
@@ -116,7 +114,7 @@ El archivo `sync_dimensions_dw.py` sincroniza **dimensiones limpias** en el DW:
 - Evita duplicados mediante UPSERT
 
 **(Insertar imagen: tabla de Dimensiones en SSMS)**  
-`![Dimensiones](link)`  
+`![Dimensiones](./resources/Imagen1.png)`  
 
 ---
 
@@ -149,7 +147,6 @@ python pipeline.py
 ```
 
 **(Insertar imagen ilustrativa del pipeline)**  
-`![Pipeline](link)`  
 
 ---
 
