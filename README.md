@@ -1,37 +1,204 @@
+# Sistema ETL para Data Warehouse de Opiniones  
+**Proyecto académico — Python + SQLite (Staging) + SQL Server (DW)**  
 
-# ETL Opiniones
+Este proyecto implementa un pipeline ETL completo para consolidar datos de opiniones provenientes de múltiples fuentes (CSV, base relacional, API simulada) y cargarlos en un **Data Warehouse en SQL Server** con un **esquema en estrella**.
 
-Pipeline ETL en Python que cumple la rúbrica de la práctica de arquitectura y extracción (adaptado de .NET a Python).
+El proceso incluye:  
+- Extracción de datos de distintas fuentes.  
+- Normalización y limpieza.  
+- Carga en tablas de *staging* (SQLite).  
+- Construcción de dimensiones limpias y consistentes.  
+- Construcción y validación de la tabla de hechos.  
+- Carga final al DW respetando llaves foráneas e integridad referencial.  
+- Pipeline automatizado.
 
-## Estructura
-- `config/settings.json`: rutas de CSV y salida SQLite
-- `core/logger.py`: logging rotativo
-- `extract/`: extractores (CSV implementado)
-- `transform/clean_data.py`: normalización y Dim Fecha
-- `load/load_to_staging.py`: *upsert* a SQLite e índices
-- `main.py`: orquestación completa
+---
 
-## Ejecutar
-```bash
-python main.py
+## Arquitectura General del Proyecto
+
+**(Inserta aquí una imagen del flujo ETL)**  
+`![Flujo ETL Aquí](link)`  
+
+El sistema consta de tres capas:
+
+1. **Staging (SQLite)** —  
+   Donde se cargan y estandarizan los datos antes de cualquier validación.
+
+2. **Transformación y Modelado** —  
+   Se construyen dimensiones, claves empresariales, columnas calculadas y normalizaciones.
+
+3. **DW en SQL Server** —  
+   Modelo en estrella con:
+   - **Dimension.Cliente**  
+   - **Dimension.Producto**  
+   - **Dimension.Fuente**  
+   - **Dimension.Fecha**  
+   - **Fact.Opinion**
+
+---
+
+## Modelo Dimensional (Esquema en Estrella)
+
+
+`![Star Schema](link)`  
+
+### Dimensiones
+
+| Dimensión | Descripción |
+|----------|-------------|
+| **Cliente** | Datos del cliente del comentario (ID, nombre, email). |
+| **Producto** | Catálogo de productos asociados a las opiniones. |
+| **Fuente** | Origen del comentario (Web, Encuesta, Social, etc.). |
+| **Fecha** | Jerarquía completa de fecha (año, mes, día). |
+
+### Hechos
+
+`Fact.Opinion` contiene cada opinión estandarizada, enlazada a sus dimensiones mediante claves sustitutas.
+
+Columnas principales:  
+- IdCliente  
+- IdProducto  
+- IdFuente  
+- IdFecha  
+- Calificación  
+- Comentario  
+- Sentimiento (pendiente de análisis NLP futuro)
+
+---
+
+## Extracción de Datos
+
+Fuentes soportadas:
+
+| Fuente | Tipo | Ejemplo |
+|--------|------|---------|
+| CSV | Web reviews, encuestas, comentarios sociales | `web_reviews.csv` |
+| Base Relacional | Tabla Opiniones en BD operativa | `SELECT * FROM Opiniones` |
+| API | Endpoint REST simulado | JSON con opiniones externas |
+
+**(Inserta imagen de los archivos CSV muestrales)**  
+`![CSV ejemplos](link)`  
+
+Los datos pasan por una fase de normalización:
+
+- Estandarización de nombres de columnas  
+- Conversión a minúsculas  
+- Parsea de fechas  
+- Normalización de texto (acentos, espacios, signos)
+
+---
+
+## Staging: Unificación y Normalización
+
+Los datos se cargan en SQLite como:
+
 ```
-La salida se genera en: `/mnt/data/etl_opiniones/output/staging_dwopiniones.sqlite` y logs en `/mnt/data/etl_opiniones/logs/etl.log`.
+stg_clients
+stg_products
+stg_fuente
+stg_social_comments
+stg_surveys
+stg_web_reviews
+stg_db_opiniones
+```
 
-## Fuentes usadas
-- clients.csv
-- products.csv
-- fuente_datos.csv
-- social_comments.csv
-- surveys_part1.csv
-- web_reviews.csv
+Cada tabla mantiene el esquema exacto que llega desde las fuentes para permitir auditoría.
 
-## Tablas generadas
-- `stg_*`: staging crudo
-- `dim_cliente`, `dim_producto`, `dim_fuente`, `dim_fecha`
-- `fact_opiniones`
+---
 
-## Atributos de calidad
-- **Rendimiento**: pandas vectorizado; IO a SQLite
-- **Escalabilidad**: extractores modulares
-- **Seguridad**: configuración centralizada en JSON (credenciales no incluidas aquí)
-- **Mantenibilidad**: separación por capas
+## Construcción de Dimensiones
+
+El archivo `sync_dimensions_dw.py` sincroniza **dimensiones limpias** en el DW:
+
+- Normaliza IDs (C###, P###, F###)  
+- Uniformiza categorías y nombres  
+- Genera claves sustitutas (IDENTITY en SQL Server)  
+- Evita duplicados mediante UPSERT
+
+**(Insertar imagen: tabla de Dimensiones en SSMS)**  
+`![Dimensiones](link)`  
+
+---
+
+## Construcción de Hechos
+
+`Fact.Opinion` se construye mediante:
+
+1. Normalización de campos comunes  
+2. Mapeo de claves empresariales → sustitutas del DW  
+3. Validación estricta de llaves foráneas  
+4. Inserción masiva (bulk insert via SQLAlchemy)
+
+Solo se cargan filas cuyo mapeo es válido, evitando errores de integridad.
+
+---
+
+## Automación del Proceso (Pipeline)
+
+Archivo incluido: `pipeline.py`  
+
+Ejecuta:
+
+1. `sync_dimensions_dw.py`  
+2. `main.py`  
+
+Comando:
+
+```bash
+python pipeline.py
+```
+
+**(Insertar imagen ilustrativa del pipeline)**  
+`![Pipeline](link)`  
+
+---
+
+## Estructura del Proyecto
+
+```
+etl_opiniones/
+│
+├── core/
+│   ├── db_engine.py
+│   ├── dw_repository.py
+│   └── logger.py
+│
+├── extract/
+│   ├── csv_extractor.py
+│   ├── db_extractor.py
+│   └── api_extractor.py
+│
+├── transform/
+│   ├── clean_data.py
+│
+├── sync_dimensions_dw.py
+├── main.py
+├── pipeline.py
+├── config/
+│   └── settings.json
+│
+└── data/
+    ├── clients.csv
+    ├── products.csv
+    ├── social_comments.csv
+    ├── surveys_part1.csv
+    ├── web_reviews.csv
+    └── fuente_datos.csv
+```
+
+---
+
+## Resultados Finales
+
+- +900 opiniones procesadas  
+- 500 clientes normalizados  
+- 200 productos limpios  
+- DW consistente con integridad referencial  
+- Pipeline ejecutable en un solo comando  
+- Base perfecta para análisis BI o dashboards
+
+---
+
+## Licencia
+
+Nilfred Baez
