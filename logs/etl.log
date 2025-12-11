@@ -264,3 +264,923 @@
 2025-11-09 14:57:09,545 - INFO - etl - Dim Fuente: 100
 2025-11-09 14:57:09,626 - INFO - etl - Dim Fecha: 200
 2025-11-09 14:57:09,822 - INFO - etl - ETL finalizado OK
+2025-12-10 08:19:46,754 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 08:19:46,758 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 08:19:48,646 - INFO - etl - BD: 17 filas
+2025-12-10 08:19:48,647 - INFO - etl - Consultando API de opiniones...
+2025-12-10 08:20:20,113 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 08:20:20,114 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 08:20:20,117 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 08:20:20,118 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 08:20:20,120 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 08:20:20,120 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 08:20:20,122 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 08:20:20,123 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 08:20:20,125 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 08:20:20,126 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 08:20:20,130 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 08:20:20,130 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 08:20:20,134 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 08:20:20,173 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 08:20:20,234 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 08:20:20,292 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 08:20:20,359 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 08:20:20,422 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 08:20:20,479 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 08:20:20,543 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 08:20:20,607 - INFO - etl - Dim Cliente: 500
+2025-12-10 08:20:20,670 - INFO - etl - Dim Producto: 200
+2025-12-10 08:20:20,725 - INFO - etl - Dim Fuente: 100
+2025-12-10 08:20:20,804 - INFO - etl - Dim Fecha: 326
+2025-12-10 08:20:20,855 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 08:20:20,908 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 08:20:20,989 - INFO - etl - ETL finalizado OK
+2025-12-10 08:25:26,595 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 08:25:26,595 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 08:25:26,873 - WARNING - etl - No se pudo consultar la BD: (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'Opiniones'. (208) (SQLExecDirectW)")
+[SQL: SELECT IdOpinion, IdCliente, IdProducto, Comentario, PuntajeSatisfaccion, Fecha, Fuente FROM Opiniones]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 08:25:26,874 - INFO - etl - Consultando API de opiniones...
+2025-12-10 08:25:32,621 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 08:25:32,621 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 08:25:32,625 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 08:25:32,626 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 08:25:32,628 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 08:25:32,629 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 08:25:32,631 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 08:25:32,632 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 08:25:32,635 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 08:25:32,636 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 08:25:32,641 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 08:25:32,642 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 08:25:32,646 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 08:25:32,692 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 08:25:32,742 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 08:25:32,785 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 08:25:32,837 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 08:25:32,883 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 08:25:32,930 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 08:25:32,991 - INFO - etl - Dim Cliente: 500
+2025-12-10 08:25:33,045 - INFO - etl - Dim Producto: 200
+2025-12-10 08:25:33,103 - INFO - etl - Dim Fuente: 100
+2025-12-10 08:25:33,182 - INFO - etl - Dim Fecha: 326
+2025-12-10 08:25:33,244 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 08:25:33,310 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 08:25:33,385 - INFO - etl - ETL finalizado OK
+2025-12-10 08:26:09,566 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 08:26:09,567 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 08:26:09,906 - INFO - etl - BD: 17 filas
+2025-12-10 08:26:09,906 - INFO - etl - Consultando API de opiniones...
+2025-12-10 08:26:30,942 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 08:26:30,942 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 08:26:30,947 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 08:26:30,947 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 08:26:30,951 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 08:26:30,951 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 08:26:30,954 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 08:26:30,955 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 08:26:30,958 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 08:26:30,959 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 08:26:30,964 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 08:26:30,964 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 08:26:30,968 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 08:26:31,020 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 08:26:31,068 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 08:26:31,194 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 08:26:31,250 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 08:26:31,322 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 08:26:31,380 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 08:26:31,441 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 08:26:31,501 - INFO - etl - Dim Cliente: 500
+2025-12-10 08:26:31,568 - INFO - etl - Dim Producto: 200
+2025-12-10 08:26:31,624 - INFO - etl - Dim Fuente: 100
+2025-12-10 08:26:31,704 - INFO - etl - Dim Fecha: 326
+2025-12-10 08:26:31,758 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 08:26:31,820 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 08:26:31,912 - INFO - etl - ETL finalizado OK
+2025-12-10 16:20:23,174 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:20:23,175 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:20:23,398 - WARNING - etl - No se pudo consultar la BD: 'NoneType' object has no attribute 'connect'
+2025-12-10 16:20:23,398 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:27:03,637 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:27:03,638 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:27:03,647 - INFO - etl - BD: 17 filas
+2025-12-10 16:27:03,647 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:27:19,039 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:27:19,039 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:27:19,057 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:27:19,059 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:27:19,078 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:27:19,078 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:27:19,094 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:27:19,095 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:27:19,117 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:27:19,118 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:27:19,175 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:27:19,186 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:27:19,212 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:27:19,289 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 16:27:19,357 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:27:19,421 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:27:19,473 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:27:19,523 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:27:19,576 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:27:19,633 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:27:19,701 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:27:19,763 - INFO - etl - Dim Producto: 200
+2025-12-10 16:27:19,821 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:27:19,899 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:27:19,965 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:27:20,033 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:35:38,741 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:35:38,742 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:35:38,750 - INFO - etl - BD: 17 filas
+2025-12-10 16:35:38,750 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:35:55,291 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:35:55,292 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:35:55,295 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:35:55,296 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:35:55,298 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:35:55,299 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:35:55,301 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:35:55,301 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:35:55,305 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:35:55,305 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:35:55,309 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:35:55,310 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:35:55,313 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:35:55,382 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 16:35:55,442 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:35:55,511 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:35:55,574 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:35:55,629 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:35:55,693 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:35:55,758 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:35:55,827 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:35:55,893 - INFO - etl - Dim Producto: 200
+2025-12-10 16:35:55,953 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:35:56,035 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:35:56,089 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:35:56,168 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:36:23,239 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:36:23,239 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:36:23,251 - INFO - etl - BD: 17 filas
+2025-12-10 16:36:23,251 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:36:44,320 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:36:44,321 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:36:44,325 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:36:44,325 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:36:44,328 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:36:44,328 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:36:44,331 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:36:44,331 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:36:44,335 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:36:44,335 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:36:44,340 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:36:44,342 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:36:44,345 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:36:44,400 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 16:36:44,454 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:36:44,504 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:36:44,555 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:36:44,616 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:36:44,672 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:36:44,734 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:36:44,791 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:36:44,859 - INFO - etl - Dim Producto: 200
+2025-12-10 16:36:44,927 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:36:45,011 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:36:45,061 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:36:45,130 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:37:20,549 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:37:20,550 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:37:20,560 - INFO - etl - BD: 17 filas
+2025-12-10 16:37:20,560 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:37:41,614 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:37:41,615 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:37:41,618 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:37:41,619 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:37:41,621 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:37:41,622 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:37:41,625 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:37:41,625 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:37:41,628 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:37:41,629 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:37:41,634 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:37:41,634 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:37:41,637 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:37:41,697 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 16:37:41,756 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:37:41,808 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:37:41,860 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:37:41,925 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:37:42,003 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:37:42,065 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:37:42,132 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:37:42,196 - INFO - etl - Dim Producto: 200
+2025-12-10 16:37:42,262 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:37:42,345 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:37:42,396 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:37:42,461 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:41:18,747 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:41:18,748 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:41:18,757 - INFO - etl - BD: 17 filas
+2025-12-10 16:41:18,758 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:41:39,808 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:41:39,809 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:41:39,812 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:41:39,813 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:41:39,815 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:41:39,815 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:41:39,818 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:41:39,818 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:41:39,821 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:41:39,822 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:41:39,828 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:41:39,828 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:41:39,831 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:41:39,891 - INFO - etl - Staging -> stg_db_opiniones: 17 filas
+2025-12-10 16:41:39,941 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:41:39,986 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:41:40,032 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:41:40,082 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:41:40,137 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:41:40,189 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:41:40,259 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:41:40,324 - INFO - etl - Dim Producto: 200
+2025-12-10 16:41:40,382 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:41:40,466 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:41:40,522 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:41:40,584 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:41:40,691 - INFO - etl - DW Load: 899 filas descartadas por IdProducto sin dimensión.
+2025-12-10 16:49:00,841 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:49:00,841 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:49:00,850 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 16:49:00,850 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:49:21,902 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:49:21,903 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:49:21,906 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:49:21,907 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:49:21,910 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:49:21,910 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:49:21,913 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:49:21,914 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:49:21,916 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:49:21,918 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:49:21,923 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:49:21,923 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:49:21,927 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:49:21,994 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:49:22,057 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:49:22,112 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:49:22,174 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:49:22,237 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:49:22,296 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:49:22,375 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:49:22,444 - INFO - etl - Dim Producto: 200
+2025-12-10 16:49:22,507 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:49:22,586 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:49:22,639 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:49:22,716 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:49:22,839 - INFO - etl - DW Load: 899 filas descartadas por IdProducto sin dimensión.
+2025-12-10 16:49:22,846 - INFO - etl - DW Load: 1 filas descartadas por IdCliente sin dimensión.
+2025-12-10 16:54:32,794 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 16:54:32,795 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 16:54:32,803 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 16:54:32,803 - INFO - etl - Consultando API de opiniones...
+2025-12-10 16:54:53,847 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 16:54:53,848 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 16:54:53,852 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 16:54:53,852 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 16:54:53,855 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 16:54:53,855 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 16:54:53,858 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 16:54:53,858 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 16:54:53,861 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 16:54:53,862 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 16:54:53,868 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 16:54:53,869 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 16:54:53,871 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 16:54:53,937 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 16:54:54,002 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 16:54:54,069 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 16:54:54,144 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 16:54:54,210 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 16:54:54,277 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 16:54:54,354 - INFO - etl - Dim Cliente: 500
+2025-12-10 16:54:54,422 - INFO - etl - Dim Producto: 200
+2025-12-10 16:54:54,488 - INFO - etl - Dim Fuente: 100
+2025-12-10 16:54:54,585 - INFO - etl - Dim Fecha: 326
+2025-12-10 16:54:54,650 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 16:54:54,730 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 16:54:54,862 - INFO - etl - DW Load: 899 filas descartadas por IdProducto sin dimensión.
+2025-12-10 16:54:54,870 - INFO - etl - DW Load: 1 filas descartadas por IdCliente sin dimensión.
+2025-12-10 16:54:54,876 - INFO - etl - DW Load: 17 filas con IdFuente inválido, se asigna IdFuente=1 por defecto.
+2025-12-10 17:13:03,511 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 17:13:03,512 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 17:13:03,522 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 17:13:03,523 - INFO - etl - Consultando API de opiniones...
+2025-12-10 17:13:19,691 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 17:13:19,691 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 17:13:19,695 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 17:13:19,695 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 17:13:19,697 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 17:13:19,697 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 17:13:19,700 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 17:13:19,700 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 17:13:19,703 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 17:13:19,703 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 17:13:19,708 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 17:13:19,708 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 17:13:19,712 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 17:13:19,772 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 17:13:19,824 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 17:13:19,879 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 17:13:19,939 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 17:13:20,003 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 17:13:20,060 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 17:13:20,126 - INFO - etl - Dim Cliente: 500
+2025-12-10 17:13:20,190 - INFO - etl - Dim Producto: 200
+2025-12-10 17:13:20,250 - INFO - etl - Dim Fuente: 100
+2025-12-10 17:13:20,329 - INFO - etl - Dim Fecha: 326
+2025-12-10 17:13:20,383 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 17:13:20,444 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 17:13:20,573 - INFO - etl - DW Load: 917 filas descartadas por IdProducto sin dimensión.
+2025-12-10 17:13:20,580 - INFO - etl - DW Load: 0 filas descartadas por IdCliente sin dimensión.
+2025-12-10 17:13:20,581 - WARNING - etl - DW Load: no quedaron filas válidas tras aplicar FK de producto/cliente.
+2025-12-10 17:13:20,582 - INFO - etl - ETL finalizado OK
+2025-12-10 17:14:04,618 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 17:14:04,619 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 17:14:04,628 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 17:14:04,628 - INFO - etl - Consultando API de opiniones...
+2025-12-10 17:14:25,692 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 17:14:25,693 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 17:14:25,697 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 17:14:25,697 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 17:14:25,700 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 17:14:25,700 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 17:14:25,703 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 17:14:25,704 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 17:14:25,707 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 17:14:25,707 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 17:14:25,712 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 17:14:25,712 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 17:14:25,716 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 17:14:25,777 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 17:14:25,825 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 17:14:25,870 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 17:14:25,939 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 17:14:25,991 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 17:14:26,041 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 17:14:26,108 - INFO - etl - Dim Cliente: 500
+2025-12-10 17:14:26,164 - INFO - etl - Dim Producto: 200
+2025-12-10 17:14:26,206 - INFO - etl - Dim Fuente: 100
+2025-12-10 17:14:26,273 - INFO - etl - Dim Fecha: 326
+2025-12-10 17:14:26,332 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 17:14:26,384 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 17:20:11,165 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:20:11,166 - WARNING - sync_dims - Error poblando Dimension.Producto: Execution failed on sql 'SELECT idproducto, nombre, categoria FROM stg_products': no such column: categoria
+2025-12-10 17:20:11,188 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 17:20:11,274 - INFO - sync_dims - Dimension.Fecha poblada: 326 filas
+2025-12-10 17:21:37,350 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:21:37,405 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 17:21:37,426 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 17:21:37,510 - INFO - sync_dims - Dimension.Fecha poblada: 326 filas
+2025-12-10 17:32:19,061 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:32:19,136 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 17:32:19,166 - WARNING - sync_dims - Error poblando Dimension.Fuente: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'Tipo', table 'DWopiniones.Dimension.Fuente'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Dimension].[Fuente] ([Nombre], [TipoFuente], [FechaCarga]) VALUES (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ... 827 characters truncated ... ), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)]
+[parameters: ('Web', 'Web', datetime.datetime(2025, 4, 10, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 1, 1, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 3, 12, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 1, 28, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 5, 30, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 9, 10, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 23, 0, 0), 'Web', 'Web', datetime.datetime(2025, 1, 2, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 7, 21, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 9, 8, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 3, 7, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 5, 13, 0, 0), 'Web', 'Web', datetime.datetime(2025, 6, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 1, 28, 0, 0), 'Web', 'Web', datetime.datetime(2025, 2, 12, 0, 0), 'Web', 'Web' ... 200 parameters truncated ... 'Red Social', datetime.datetime(2025, 3, 28, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 18, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 4, 15, 0, 0), 'Web', 'Web', datetime.datetime(2025, 2, 3, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 4, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 13, 0, 0), 'Web', 'Web', datetime.datetime(2025, 5, 29, 0, 0), 'Web', 'Web', datetime.datetime(2025, 8, 24, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 5, 29, 0, 0), 'Web', 'Web', datetime.datetime(2025, 7, 13, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 15, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 1, 1, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 2, 4, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 3, 22, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 3, 19, 0, 0), 'Web', 'Web', datetime.datetime(2025, 6, 14, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 2, 0, 0))]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-10 17:32:19,289 - WARNING - sync_dims - Error poblando Dimension.Fecha: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Fecha' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")
+[SQL: INSERT INTO [Dimension].[Fecha] ([IdFecha], [Fecha], [Anio], [Mes], [Dia]) VALUES (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?) ... 5170 characters truncated ... (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?)]
+[parameters: (20250615, datetime.datetime(2025, 6, 15, 0, 0), 2025, 6, 15, 20250827, datetime.datetime(2025, 8, 27, 0, 0), 2025, 8, 27, 20250728, datetime.datetime(2025, 7, 28, 0, 0), 2025, 7, 28, 20250905, datetime.datetime(2025, 9, 5, 0, 0), 2025, 9, 5, 20250904, datetime.datetime(2025, 9, 4, 0, 0), 2025, 9, 4, 20250618, datetime.datetime(2025, 6, 18, 0, 0), 2025, 6, 18, 20250720, datetime.datetime(2025, 7, 20, 0, 0), 2025, 7, 20, 20250825, datetime.datetime(2025, 8, 25, 0, 0), 2025, 8, 25, 20250709, datetime.datetime(2025, 7, 9, 0, 0), 2025, 7, 9, 20250828, datetime.datetime(2025, 8, 28, 0, 0), 2025, 8, 28 ... 1500 parameters truncated ... 20250406, datetime.datetime(2025, 4, 6, 0, 0), 2025, 4, 6, 20250107, datetime.datetime(2025, 1, 7, 0, 0), 2025, 1, 7, 20241201, datetime.datetime(2024, 12, 1, 0, 0), 2024, 12, 1, 20241121, datetime.datetime(2024, 11, 21, 0, 0), 2024, 11, 21, 20250131, datetime.datetime(2025, 1, 31, 0, 0), 2025, 1, 31, 20241020, datetime.datetime(2024, 10, 20, 0, 0), 2024, 10, 20, 20240913, datetime.datetime(2024, 9, 13, 0, 0), 2024, 9, 13, 20250114, datetime.datetime(2025, 1, 14, 0, 0), 2025, 1, 14, 20241108, datetime.datetime(2024, 11, 8, 0, 0), 2024, 11, 8, 19700101, datetime.datetime(1970, 1, 1, 0, 0), 1970, 1, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-10 17:33:44,948 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:33:45,003 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 17:33:45,025 - WARNING - sync_dims - Error poblando Dimension.Fuente: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'Tipo', table 'DWopiniones.Dimension.Fuente'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Dimension].[Fuente] ([Nombre], [TipoFuente], [FechaCarga]) VALUES (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ... 827 characters truncated ... ), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?), (?, ?, ?)]
+[parameters: ('Web', 'Web', datetime.datetime(2025, 4, 10, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 1, 1, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 3, 12, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 1, 28, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 5, 30, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 9, 10, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 23, 0, 0), 'Web', 'Web', datetime.datetime(2025, 1, 2, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 7, 21, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 9, 8, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 3, 7, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 5, 13, 0, 0), 'Web', 'Web', datetime.datetime(2025, 6, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 1, 28, 0, 0), 'Web', 'Web', datetime.datetime(2025, 2, 12, 0, 0), 'Web', 'Web' ... 200 parameters truncated ... 'Red Social', datetime.datetime(2025, 3, 28, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 18, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 4, 15, 0, 0), 'Web', 'Web', datetime.datetime(2025, 2, 3, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 4, 2, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 13, 0, 0), 'Web', 'Web', datetime.datetime(2025, 5, 29, 0, 0), 'Web', 'Web', datetime.datetime(2025, 8, 24, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 5, 29, 0, 0), 'Web', 'Web', datetime.datetime(2025, 7, 13, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 8, 15, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 1, 1, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 2, 4, 0, 0), 'CSV', 'CSV', datetime.datetime(2025, 3, 22, 0, 0), 'Red Social', 'Red Social', datetime.datetime(2025, 3, 19, 0, 0), 'Web', 'Web', datetime.datetime(2025, 6, 14, 0, 0), 'Web', 'Web', datetime.datetime(2025, 4, 2, 0, 0))]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-10 17:33:45,144 - WARNING - sync_dims - Error poblando Dimension.Fecha: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Fecha' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")
+[SQL: INSERT INTO [Dimension].[Fecha] ([IdFecha], [Fecha], [Anio], [Mes], [Dia]) VALUES (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?) ... 5170 characters truncated ... (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?), (?, ?, ?, ?, ?)]
+[parameters: (20250615, datetime.datetime(2025, 6, 15, 0, 0), 2025, 6, 15, 20250827, datetime.datetime(2025, 8, 27, 0, 0), 2025, 8, 27, 20250728, datetime.datetime(2025, 7, 28, 0, 0), 2025, 7, 28, 20250905, datetime.datetime(2025, 9, 5, 0, 0), 2025, 9, 5, 20250904, datetime.datetime(2025, 9, 4, 0, 0), 2025, 9, 4, 20250618, datetime.datetime(2025, 6, 18, 0, 0), 2025, 6, 18, 20250720, datetime.datetime(2025, 7, 20, 0, 0), 2025, 7, 20, 20250825, datetime.datetime(2025, 8, 25, 0, 0), 2025, 8, 25, 20250709, datetime.datetime(2025, 7, 9, 0, 0), 2025, 7, 9, 20250828, datetime.datetime(2025, 8, 28, 0, 0), 2025, 8, 28 ... 1500 parameters truncated ... 20250406, datetime.datetime(2025, 4, 6, 0, 0), 2025, 4, 6, 20250107, datetime.datetime(2025, 1, 7, 0, 0), 2025, 1, 7, 20241201, datetime.datetime(2024, 12, 1, 0, 0), 2024, 12, 1, 20241121, datetime.datetime(2024, 11, 21, 0, 0), 2024, 11, 21, 20250131, datetime.datetime(2025, 1, 31, 0, 0), 2025, 1, 31, 20241020, datetime.datetime(2024, 10, 20, 0, 0), 2024, 10, 20, 20240913, datetime.datetime(2024, 9, 13, 0, 0), 2024, 9, 13, 20250114, datetime.datetime(2025, 1, 14, 0, 0), 2025, 1, 14, 20241108, datetime.datetime(2024, 11, 8, 0, 0), 2024, 11, 8, 19700101, datetime.datetime(1970, 1, 1, 0, 0), 1970, 1, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-10 17:58:25,448 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:58:25,504 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 17:58:25,533 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 17:58:25,613 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 17:59:27,883 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 17:59:27,944 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 17:59:27,974 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 17:59:28,058 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 18:04:53,223 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:04:53,224 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:04:53,232 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:04:53,233 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:04:57,127 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:04:57,128 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:04:57,133 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:04:57,133 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:04:57,136 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:04:57,137 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:04:57,139 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:04:57,140 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:04:57,144 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:04:57,145 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:04:57,149 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:04:57,150 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:04:57,153 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:04:57,223 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:04:57,286 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:04:57,346 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:04:57,413 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:04:57,483 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:04:57,549 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:04:57,611 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:04:57,673 - INFO - etl - Dim Producto: 200
+2025-12-10 18:04:57,730 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:04:57,805 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:04:57,866 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:04:57,930 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:19:28,932 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:19:28,932 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:19:28,943 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:19:28,944 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:19:43,634 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:19:43,635 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:19:43,639 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:19:43,639 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:19:43,642 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:19:43,642 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:19:43,645 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:19:43,645 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:19:43,648 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:19:43,649 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:19:43,654 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:19:43,655 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:19:43,658 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:19:43,704 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:19:43,749 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:19:43,791 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:19:43,841 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:19:43,895 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:19:43,942 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:19:44,003 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:19:44,062 - INFO - etl - Dim Producto: 200
+2025-12-10 18:19:44,121 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:19:44,208 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:19:44,270 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:19:44,331 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:19:59,010 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 18:19:59,062 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 18:19:59,102 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 18:19:59,187 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 18:20:04,916 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:20:04,916 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:20:04,924 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:20:04,925 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:20:26,185 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:20:26,186 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:20:26,189 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:20:26,190 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:20:26,192 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:20:26,194 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:20:26,196 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:20:26,198 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:20:26,202 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:20:26,202 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:20:26,206 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:20:26,206 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:20:26,210 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:20:26,273 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:20:26,335 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:20:26,385 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:20:26,434 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:20:26,498 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:20:26,552 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:20:26,615 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:20:26,674 - INFO - etl - Dim Producto: 200
+2025-12-10 18:20:26,744 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:20:26,846 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:20:26,909 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:20:26,987 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:25:25,629 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:25:25,629 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:25:25,639 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:25:25,640 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:25:53,000 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:25:53,001 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:25:53,004 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:25:53,005 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:25:53,007 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:25:53,008 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:25:53,010 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:25:53,011 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:25:53,014 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:25:53,014 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:25:53,019 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:25:53,019 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:25:53,022 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:25:53,096 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:25:53,160 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:25:53,226 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:25:53,291 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:25:53,372 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:25:53,438 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:25:53,513 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:25:53,582 - INFO - etl - Dim Producto: 200
+2025-12-10 18:25:53,653 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:25:53,744 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:25:53,798 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:25:53,871 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:28:01,067 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:28:01,067 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:28:01,076 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:28:01,077 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:28:29,377 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:28:29,378 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:28:29,381 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:28:29,382 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:28:29,384 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:28:29,385 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:28:29,387 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:28:29,388 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:28:29,391 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:28:29,391 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:28:29,397 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:28:29,397 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:28:29,401 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:28:29,462 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:28:29,517 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:28:29,578 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:28:29,629 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:28:29,693 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:28:29,745 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:28:29,807 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:28:29,865 - INFO - etl - Dim Producto: 200
+2025-12-10 18:28:29,919 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:28:29,997 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:28:30,055 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:28:30,119 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:28:30,250 - INFO - etl - DW Load: 0 filas cargadas correctamente.
+2025-12-10 18:28:30,250 - INFO - etl - ETL finalizado OK
+2025-12-10 18:45:26,938 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:45:26,939 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:45:26,950 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:45:26,950 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:45:47,989 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:45:47,990 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:45:47,993 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:45:47,993 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:45:47,996 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:45:47,997 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:45:47,999 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:45:47,999 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:45:48,003 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:45:48,004 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:45:48,008 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:45:48,008 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:45:48,011 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:45:48,083 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:45:48,141 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:45:48,195 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:45:48,252 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:45:48,315 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:45:48,374 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:45:48,459 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:45:48,526 - INFO - etl - Dim Producto: 200
+2025-12-10 18:45:48,580 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:45:48,710 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:45:48,764 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:45:48,829 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:59:42,560 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 18:59:42,561 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 18:59:42,570 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 18:59:42,570 - INFO - etl - Consultando API de opiniones...
+2025-12-10 18:59:57,779 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 18:59:57,779 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 18:59:57,783 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 18:59:57,783 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 18:59:57,786 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 18:59:57,787 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 18:59:57,791 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 18:59:57,791 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 18:59:57,794 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 18:59:57,795 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 18:59:57,799 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 18:59:57,800 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 18:59:57,803 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 18:59:57,861 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 18:59:57,925 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 18:59:57,984 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 18:59:58,040 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 18:59:58,105 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 18:59:58,171 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 18:59:58,239 - INFO - etl - Dim Cliente: 500
+2025-12-10 18:59:58,305 - INFO - etl - Dim Producto: 200
+2025-12-10 18:59:58,365 - INFO - etl - Dim Fuente: 100
+2025-12-10 18:59:58,450 - INFO - etl - Dim Fecha: 326
+2025-12-10 18:59:58,542 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 18:59:58,603 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 18:59:58,715 - INFO - etl - DW Load: 400 filas descartadas por falta de IdCliente/IdProducto/IdFecha.
+2025-12-10 20:32:31,994 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:32:31,995 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:32:32,004 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 20:32:32,005 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:32:54,591 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:32:54,591 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:32:54,595 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:32:54,595 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:32:54,598 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:32:54,598 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:32:54,601 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:32:54,602 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:32:54,604 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:32:54,605 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:32:54,609 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:32:54,609 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:32:54,612 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:32:54,680 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:32:54,745 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:32:54,819 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:32:54,882 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:32:54,948 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:32:55,019 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:32:55,094 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:32:55,181 - INFO - etl - Dim Producto: 200
+2025-12-10 20:32:55,252 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:32:55,342 - INFO - etl - Dim Fecha: 326
+2025-12-10 20:32:55,398 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:32:55,459 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 20:32:55,577 - INFO - etl - DW Load: 917 filas descartadas por falta de IdCliente/IdProducto/IdFecha/IdFuente válidos.
+2025-12-10 20:32:55,578 - INFO - etl - DW Load: tras filtrar claves inválidas no quedó ninguna fila.
+2025-12-10 20:32:55,579 - INFO - etl - ETL finalizado OK
+2025-12-10 20:43:16,135 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 20:43:16,191 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 20:43:16,220 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 20:43:16,302 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 20:43:22,260 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:43:22,261 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:43:22,270 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 20:43:22,270 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:43:49,912 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:43:49,912 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:43:49,916 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:43:49,916 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:43:49,919 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:43:49,919 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:43:49,922 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:43:49,922 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:43:49,926 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:43:49,928 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:43:49,932 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:43:49,932 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:43:49,935 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:43:50,003 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:43:50,056 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:43:50,107 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:43:50,164 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:43:50,226 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:43:50,300 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:43:50,377 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:43:50,438 - INFO - etl - Dim Producto: 200
+2025-12-10 20:43:50,513 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:43:50,599 - INFO - etl - Dim Fecha: 326
+2025-12-10 20:43:50,651 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:43:50,723 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 20:43:50,857 - INFO - etl - DW Load: 917 filas descartadas por falta de IdCliente/IdProducto/IdFecha/IdFuente válidos.
+2025-12-10 20:43:50,859 - INFO - etl - DW Load: tras filtrar claves inválidas no quedó ninguna fila.
+2025-12-10 20:43:50,859 - INFO - etl - ETL finalizado OK
+2025-12-10 20:44:09,484 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:44:09,484 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:44:09,492 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 20:44:09,493 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:44:30,540 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:44:30,541 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:44:30,545 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:44:30,546 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:44:30,549 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:44:30,550 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:44:30,552 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:44:30,552 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:44:30,555 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:44:30,557 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:44:30,563 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:44:30,565 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:44:30,568 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:44:30,626 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:44:30,681 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:44:30,739 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:44:30,803 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:44:30,866 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:44:30,926 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:44:30,991 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:44:31,050 - INFO - etl - Dim Producto: 200
+2025-12-10 20:44:31,111 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:44:31,190 - INFO - etl - Dim Fecha: 326
+2025-12-10 20:44:31,247 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:44:31,305 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 20:44:31,425 - INFO - etl - DW Load: 894 filas descartadas por FKs inválidos (cliente/producto/fecha/fuente).
+2025-12-10 20:44:31,461 - INFO - etl - DW Load: 23 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 20:44:31,462 - INFO - etl - ETL finalizado OK
+2025-12-10 20:46:27,167 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 20:46:27,224 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 20:46:27,253 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 20:46:27,344 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 20:46:34,613 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:46:34,613 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:46:34,623 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 20:46:34,623 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:46:55,685 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:46:55,685 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:46:55,689 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:46:55,689 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:46:55,692 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:46:55,692 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:46:55,697 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:46:55,699 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:46:55,702 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:46:55,702 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:46:55,707 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:46:55,707 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:46:55,710 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:46:55,764 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:46:55,808 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:46:55,858 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:46:55,912 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:46:55,975 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:46:56,026 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:46:56,083 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:46:56,142 - INFO - etl - Dim Producto: 200
+2025-12-10 20:46:56,193 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:46:56,280 - INFO - etl - Dim Fecha: 326
+2025-12-10 20:46:56,341 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:46:56,397 - INFO - etl - FACT: fact_opiniones = 917 filas
+2025-12-10 20:46:56,506 - INFO - etl - DW Load: 894 filas descartadas por FKs inválidos (cliente/producto/fecha/fuente).
+2025-12-10 20:46:56,537 - INFO - etl - DW Load: 23 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 20:46:56,538 - INFO - etl - ETL finalizado OK
+2025-12-10 20:51:20,894 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:51:20,894 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:51:20,906 - INFO - etl - BD: 23 filas
+2025-12-10 20:51:20,906 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:51:21,345 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:51:21,345 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:51:21,349 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:51:21,349 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:51:21,352 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:51:21,353 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:51:21,356 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:51:21,356 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:51:21,359 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:51:21,360 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:51:21,365 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:51:21,365 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:51:21,368 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:51:21,447 - INFO - etl - Staging -> stg_db_opiniones: 23 filas
+2025-12-10 20:51:21,508 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:51:21,585 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:51:21,653 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:51:21,729 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:51:21,802 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:51:21,877 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:51:21,967 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:51:22,048 - INFO - etl - Dim Producto: 200
+2025-12-10 20:51:22,126 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:51:22,226 - INFO - etl - Dim Fecha: 326
+2025-12-10 20:51:22,281 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:51:22,373 - INFO - etl - FACT: fact_opiniones = 923 filas
+2025-12-10 20:51:22,524 - INFO - etl - DW Load: 400 filas descartadas por FKs inválidos (cliente/producto/fecha/fuente).
+2025-12-10 20:51:22,881 - INFO - etl - DW Load: 523 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 20:51:22,881 - INFO - etl - ETL finalizado OK
+2025-12-10 20:57:02,057 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 20:57:02,058 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 20:57:02,076 - INFO - etl - BD: 546 filas
+2025-12-10 20:57:02,077 - INFO - etl - Consultando API de opiniones...
+2025-12-10 20:57:02,482 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 20:57:02,483 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 20:57:02,486 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 20:57:02,487 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 20:57:02,490 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 20:57:02,490 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 20:57:02,493 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 20:57:02,493 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 20:57:02,496 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 20:57:02,497 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 20:57:02,502 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 20:57:02,502 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 20:57:02,505 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 20:57:02,569 - INFO - etl - Staging -> stg_db_opiniones: 546 filas
+2025-12-10 20:57:02,635 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 20:57:02,691 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 20:57:02,750 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 20:57:02,817 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 20:57:02,879 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 20:57:02,936 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 20:57:03,001 - INFO - etl - Dim Cliente: 500
+2025-12-10 20:57:03,062 - INFO - etl - Dim Producto: 200
+2025-12-10 20:57:03,114 - INFO - etl - Dim Fuente: 100
+2025-12-10 20:57:03,209 - INFO - etl - Dim Fecha: 583
+2025-12-10 20:57:03,269 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 20:57:03,344 - INFO - etl - FACT: fact_opiniones = 1446 filas
+2025-12-10 20:57:04,555 - INFO - etl - DW Load: 1446 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 20:57:04,555 - INFO - etl - ETL finalizado OK
+2025-12-10 21:04:17,424 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 21:04:17,424 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 21:04:17,433 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 21:04:17,433 - INFO - etl - Consultando API de opiniones...
+2025-12-10 21:04:38,480 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 21:04:38,481 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 21:04:38,484 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 21:04:38,485 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 21:04:38,488 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 21:04:38,488 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 21:04:38,491 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 21:04:38,491 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 21:04:38,494 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 21:04:38,495 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 21:04:38,500 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 21:04:38,500 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 21:04:38,503 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 21:04:38,574 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 21:04:38,632 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 21:04:38,681 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 21:04:38,737 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 21:04:38,801 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 21:04:38,851 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 21:04:38,915 - INFO - etl - Dim Cliente: 500
+2025-12-10 21:04:38,971 - INFO - etl - Dim Producto: 200
+2025-12-10 21:04:39,034 - INFO - etl - Dim Fuente: 100
+2025-12-10 21:04:39,113 - INFO - etl - Dim Fecha: 583
+2025-12-10 21:04:39,173 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 21:04:39,246 - INFO - etl - FACT: fact_opiniones = 1446 filas
+2025-12-10 21:04:54,864 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 21:04:54,975 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 21:04:55,008 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 21:04:55,108 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 21:05:02,088 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 21:05:02,089 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 21:05:02,098 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 21:05:02,098 - INFO - etl - Consultando API de opiniones...
+2025-12-10 21:05:21,436 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 21:05:21,437 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 21:05:21,441 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 21:05:21,441 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 21:05:21,444 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 21:05:21,446 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 21:05:21,449 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 21:05:21,449 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 21:05:21,455 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 21:05:21,455 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 21:05:21,462 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 21:05:21,464 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 21:05:21,468 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 21:05:21,541 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 21:05:21,598 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 21:05:21,658 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 21:05:21,717 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 21:05:21,796 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 21:05:21,861 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 21:05:21,977 - INFO - etl - Dim Cliente: 500
+2025-12-10 21:05:22,065 - INFO - etl - Dim Producto: 200
+2025-12-10 21:05:22,130 - INFO - etl - Dim Fuente: 100
+2025-12-10 21:05:22,267 - INFO - etl - Dim Fecha: 583
+2025-12-10 21:05:22,400 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 21:05:22,499 - INFO - etl - FACT: fact_opiniones = 1446 filas
+2025-12-10 21:05:24,488 - INFO - etl - DW Load: 1446 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 21:05:24,489 - INFO - etl - ETL finalizado OK
+2025-12-10 21:19:24,249 - INFO - sync_dims - Dimension.Cliente poblada: 500 filas
+2025-12-10 21:19:24,303 - INFO - sync_dims - Dimension.Producto poblada: 200 filas
+2025-12-10 21:19:24,329 - INFO - sync_dims - Dimension.Fuente poblada: 100 filas
+2025-12-10 21:19:24,415 - INFO - sync_dims - Dimension.Fecha poblada: 320 filas
+2025-12-10 21:19:27,123 - INFO - etl - === ETL Opiniones (Python) ===
+2025-12-10 21:19:27,124 - INFO - etl - Consultando base de datos relacional...
+2025-12-10 21:19:27,132 - WARNING - etl - BD: consulta vacía o sin filas.
+2025-12-10 21:19:27,133 - INFO - etl - Consultando API de opiniones...
+2025-12-10 21:19:34,330 - WARNING - etl - API: respuesta vacía/no JSON o sin filas.
+2025-12-10 21:19:34,331 - INFO - etl - Leyendo clients_csv desde ../etl_opiniones/data/clients.csv
+2025-12-10 21:19:34,334 - INFO - etl - CSV clients_csv: 500 filas
+2025-12-10 21:19:34,335 - INFO - etl - Leyendo products_csv desde ../etl_opiniones/data/products.csv
+2025-12-10 21:19:34,337 - INFO - etl - CSV products_csv: 200 filas
+2025-12-10 21:19:34,338 - INFO - etl - Leyendo fuente_csv desde ../etl_opiniones/data/fuente_datos.csv
+2025-12-10 21:19:34,342 - INFO - etl - CSV fuente_csv: 100 filas
+2025-12-10 21:19:34,343 - INFO - etl - Leyendo social_comments_csv desde ../etl_opiniones/data/social_comments.csv
+2025-12-10 21:19:34,345 - INFO - etl - CSV social_comments_csv: 200 filas
+2025-12-10 21:19:34,346 - INFO - etl - Leyendo surveys_csv desde ../etl_opiniones/data/surveys_part1.csv
+2025-12-10 21:19:34,350 - INFO - etl - CSV surveys_csv: 500 filas
+2025-12-10 21:19:34,351 - INFO - etl - Leyendo web_reviews_csv desde ../etl_opiniones/data/web_reviews.csv
+2025-12-10 21:19:34,354 - INFO - etl - CSV web_reviews_csv: 200 filas
+2025-12-10 21:19:34,425 - INFO - etl - Staging -> stg_clients: 500 filas
+2025-12-10 21:19:34,484 - INFO - etl - Staging -> stg_products: 200 filas
+2025-12-10 21:19:34,544 - INFO - etl - Staging -> stg_fuente: 100 filas
+2025-12-10 21:19:34,600 - INFO - etl - Staging -> stg_social_comments: 200 filas
+2025-12-10 21:19:34,655 - INFO - etl - Staging -> stg_surveys: 500 filas
+2025-12-10 21:19:34,793 - INFO - etl - Staging -> stg_web_reviews: 200 filas
+2025-12-10 21:19:34,860 - INFO - etl - Dim Cliente: 500
+2025-12-10 21:19:34,933 - INFO - etl - Dim Producto: 200
+2025-12-10 21:19:35,000 - INFO - etl - Dim Fuente: 100
+2025-12-10 21:19:35,089 - INFO - etl - Dim Fecha: 583
+2025-12-10 21:19:35,171 - WARNING - etl - FACT: no se pudo procesar stg_api_opiniones: Execution failed on sql 'SELECT * FROM stg_api_opiniones': no such table: stg_api_opiniones
+2025-12-10 21:19:35,237 - INFO - etl - FACT: fact_opiniones = 1446 filas
+2025-12-10 21:19:36,976 - INFO - etl - DW Load: 1446 filas cargadas correctamente en Fact.Opinion.
+2025-12-10 21:19:36,977 - INFO - etl - ETL finalizado OK
